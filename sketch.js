@@ -1,6 +1,7 @@
 /*jshint esversion:10*/
 
-var socket = new WebSocket('wss://server.imagineengine.repl.co/')
+fetch('server_ip.txt').then(data => data.text()).then(text => ip = text)
+var socket = new WebSocket(ip)
 var connecting = true
 
 socket.onopen = function(){
