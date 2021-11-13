@@ -1,5 +1,5 @@
 # Multiplayer
-Better Version of my other multiplayer
+Better Version of my other multiplayer. I made this just to see whether I could make it. Its not meant to be professional or anything
 
 
 To try this you need to host the index.js somewhere with Node.js and then enter the ip into the server_ip.txt file. Host the html, js and css files as well and run the html file and it wil connect to the Node.js server.
