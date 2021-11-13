@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="en" style=""><head>
+    <script src="p5.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+  </head>
+  
+  <body onunload="end()" id="body" onresize="onResize()" style="overflow: hidden" onkeypress="onKeyPress(event)">
+    <div id="spotlight"></div>
+    <div id="spotlight2" class="spotlight2" style="display: none"></div>
+    
+    <script src="sketch.js"></script>
+    <div id="name" style="overflow:visible">
+    <input id="input" type="text" class="main" style="width: 60%" placeholder="Name"><button class="main" style="width:30%" onclick="start()">Start!</button>
+      
+      <div style="text-align:center;" id="div">
+  <span id="#FF0000" class="dot" style="background-color: #FF0000; box-shadow: 0 0 0 5pt #FF0000" onclick="change('#FF0000')"></span>
+  <span id="#FF8800" class="dot" style="background-color: #FF8800;" onclick="change('#FF8800')"></span>
+  <span id="#FFFF00" class="dot" style="background-color: #FFFF00;" onclick="change('#FFFF00')"></span>
+  <br>
+  <span id="#00FF00" class="dot" style="background-color: #00FF00;" onclick="change('#00FF00')"></span>
+  <span id="#00FFFF" class="dot" style="background-color: #00FFFF;" onclick="change('#00FFFF')"></span>
+  <span id="#007D00" class="dot" style="background-color: #007D00;" onclick="change('#007D00')"></span>
+  <br>
+  <span id="#0000FF" class="dot" style="background-color: #0000FF;" onclick="change('#0000FF')"></span>
+  <span id="#7F00FF" class="dot" style="background-color: #7F00FF;" onclick="change('#7F00FF')"></span>
+  <span id="#FF00FF" class="dot" style="background-color: #FF00FF;" onclick="change('#FF00FF')"></span>
+  <br>
+  <span id="#FFFFFF" class="dot" style="background-color: #FFFFFF;" onclick="change('#FFFFFF')"></span>
+  <span id="#333333" class="dot" style="background-color: #333333;" onclick="change('#333333')"></span>
+  <span id="#663300" class="dot" style="background-color: #663300;" onclick="change('#663300')"></span>
+        
+</div>
+      </div>
+    <div id="id01" class="modal" style="display:none; position: absolute;">
+    <div class="container" id="messages" style="width: 100%; background-color:#EEE ;overflow: auto;height: 90%; margin:auto">
+      </div>
+      <input style="float: left; height: 10%; width: 85%;overflow: auto; padding: 0px; margin: 0; border: 0px; font-size: 20px" placeholder="Send Message" id="mi">
+      <button style="height: 10%; width: 15%;overflow: auto; top: 10px; outline: 0px; font-size: 20px" onclick="chatMessage()">Send</button>
+</div>
+    <div style="width:50%; height: 15%; text-align: left; border: 0px; top: 40%; left: 0%; background-color: rgb(0, 0, 0, 0); display: none" class="modal" id="alert">
+  <p style="color: #FF7777; padding: 5px" id="update">
+  </p>
+</div>
+    <button class="fs" style="display: none; background-image: url('https://fromthegrounduplexington.com/wp-content/uploads/2019/03/fullscreen-icon-150x150.png');" id="fs" onclick="document.getElementById('body').requestFullscreen()"></button>
+    <button class="ms" style="display: none; top:60px right: 0px;" id="ms" onclick="messageHandle()"></button>
+    <button class="at" style="display: none" id="at" onclick="attack()"></button>
+
+    <div id="error" style="display: none; background-color: #000000; color: #FFFFFF" class="modal">
+      <p style="font-size: 50px">Disconnected from the server</p>
+      <p id="retry"></p>
+    </div>
+    <div id="connecting" style="display: block; background-color: #000000; color: #FFFFFF" class="modal">
+      <p style="font-size: 50px">Connecting to the server</p>
+    </div>
+  
+</body></html>
